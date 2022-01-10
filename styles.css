@@ -1,0 +1,22 @@
+/* what kind of style do i want on my grid */
+
+:root {
+    --grid-rows: 1;
+    --grid-columns: 1;
+}
+
+#container {
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+}
+
+.grid-cell {
+    padding: 1em;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+
+.grid-cell:hover {
+    background-color: #f3f3f3;
+}
