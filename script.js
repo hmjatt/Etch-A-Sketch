@@ -33,14 +33,28 @@ function makeGrid(rows, columns) {
     
     //make a grid using user input
     for(i = 0; i < (rows * columns); i++) {
-        let cell = document.createElement("div");
+        const cell = document.createElement("div");
     
         container.appendChild(cell).className = "grid-cell";
         cell.addEventListener('mouseover', function color(){
             //generate random color
-            let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
             
-            //add color to the grid-cell
+            const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+            const randomByte = () => randomNumber(0, 255);
+            
+            //generate opacity, based on cell's previous opacity
+            function opacity() {
+                let opacity = window.getComputedStyle(cell).backgroundColor;
+                const myArray = opacity.split(", ");
+                let previousOpacity = myArray.slice(-1)[0];
+                let previousOpacityInt = parseFloat(previousOpacity);
+                let newOpacity =  previousOpacityInt + 0.10;
+                return newOpacity;
+            }
+            
+            // create color with generated opacity
+            const randomColor = `rgba(${[randomByte(), randomByte(), randomByte(), opacity()].join(',')})`
+    
             cell.style.backgroundColor = randomColor;
         });
         
