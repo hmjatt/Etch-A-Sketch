@@ -5,6 +5,29 @@
     --grid-columns: 1;
 }
 
+body {
+    background-color: rgb(13, 13, 48);
+}
+
+#game-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#game-frame-div {
+
+    display: flex;
+    justify-content: center;
+
+    width: 700px;
+    height: 650px;
+ 
+    background: rgb(255, 49, 49);
+
+}
+
+
 
 #reset-div {
     display: flex;
@@ -15,17 +38,18 @@
 
 #container {
     display: grid;
-    justify-content: center;
-    grid-template-rows: repeat(var(--grid-rows), 23px);
-    grid-template-columns: repeat(var(--grid-columns), 23px);
+
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    height: 500px;
+    width: 500px;
+    padding: 100px
 }
 
 .grid-cell {
-    border: 1px solid rgba(220, 220, 220, 0.26);
+    display: flex;
     background-color: rgba(255, 255, 255, 0);
+    z-index: 1;
     
 }
 
-.pen-class-effect {
-    background-color: #62abff;
-}
