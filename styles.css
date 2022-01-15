@@ -5,6 +5,10 @@
     --grid-columns: 1;
 }
 
+body {
+    background-color: #161616;
+}
+
 #game-div, #game-heading-div, #game-screen-div {
     display: flex;
     justify-content: center;
@@ -15,9 +19,16 @@
     display: flex;
     flex-direction: column;
     width: 600px;
-    height: 600px;
-    background: rgb(255, 49, 49);
-    border-radius: 78px;
+    height: 650px;
+    background: rgb(199, 0, 33);
+    border-radius: 56px;
+}
+
+h1 {
+    font-family: 'Marck Script', cursive;
+    font-size: 48px;
+    color: rgb(255, 196, 0)
+
 }
 
 
@@ -40,6 +51,10 @@
 
 #buttons-div, #control-buttons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
+
+#buttons-div{
+    padding: 3em;
+}
