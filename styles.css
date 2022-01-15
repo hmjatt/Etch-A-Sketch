@@ -5,45 +5,30 @@
     --grid-columns: 1;
 }
 
-body {
-    background-color: rgb(13, 13, 48);
-}
-
-#game-div {
+#game-div, #game-heading-div, #game-screen-div {
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
+
 
 #game-frame-div {
-
     display: flex;
-    justify-content: center;
-
-    width: 700px;
-    height: 650px;
- 
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
     background: rgb(255, 49, 49);
-
+    border-radius: 78px;
 }
 
-
-
-#reset-div {
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    
-}
 
 #container {
     display: grid;
-
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    height: 500px;
-    width: 500px;
-    padding: 100px
+    height: 400px;
+    width: 400px;
+    background-color: antiquewhite;
+
 }
 
 .grid-cell {
@@ -51,5 +36,10 @@ body {
     background-color: rgba(255, 255, 255, 0);
     z-index: 1;
     
+}
+
+#buttons-div, #control-buttons {
+    display: flex;
+    justify-content: space-evenly;
 }
 

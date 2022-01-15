@@ -10,25 +10,54 @@
 </head>
 <body>
     <div id="game-div">
-        <div id="reset-div">
-            <button onclick="clear()" id="reset-button">Shake-It</button>
-        </div>
-
-    
-
-        
-        
+            
         <div id="game-frame-div">
 
-            <div id="container">
+            <div id=game-heading-div>
+                <h1>Etch-A-Sketch</h1>
+            </div>
+
+
+            <div id="game-screen-div">
+                <div id="container"></div>
+            </div>
+
+
+            <div id="buttons-div">
+
+                <div id="left-knob-div">
+                    <button>Left Knob</button>
+                </div>
     
+    
+                <div id="control-buttons">
+                    <div id="mode-div">
+                        <button onclick="clear()" id="mode-button">Mode</button>
+                    </div>
+    
+                    <div id="color-div">
+                        <button onclick="clear()" id="reset-button">Color</button>
+                    </div>
+    
+                    <div id=size-div">
+                        <button onclick="clear()" id="size-button">Size</button>
+                    </div>
+    
+                    <div id="reset-div">
+                        <button onclick="clear()" id="reset-button">Shake-It</button>
+                    </div>
+                </div>
+    
+    
+                <div id="right-knob-div">
+                    <button>Right Knob</button>
+                </div>
+
             </div>
             
         </div>
+        
     </div>
-    
-
-
 
     <script src="script.js"></script>
 </body>
