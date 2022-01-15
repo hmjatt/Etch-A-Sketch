@@ -6,7 +6,9 @@
 }
 
 body {
-    background-color: #161616;
+    background-color: rgb(26, 26, 26);
+
+    padding: 2em;
 }
 
 #game-div, #game-heading-div, #game-screen-div {
@@ -14,47 +16,101 @@ body {
     justify-content: center;
 }
 
-
 #game-frame-div {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    height: 650px;
-    background: rgb(199, 0, 33);
+    width: 800px;
+    height: 950px;
+    background: rgb(255, 97, 97);
     border-radius: 56px;
 }
 
 h1 {
     font-family: 'Marck Script', cursive;
-    font-size: 48px;
-    color: rgb(255, 196, 0)
-
+    font-size: 60px;
+    color: rgba(252, 255, 64, 0.952);
 }
 
+#game-heading-div p {
+    font-family: 'Raleway', sans-serif;
+    color: rgba(252, 255, 64, 0.952);
+    font-size: 24px;
+    padding-bottom: 50px;
+}
 
-#container {
+#grid-container {
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    height: 400px;
-    width: 400px;
-    background-color: antiquewhite;
+    height: 600px;
+    width: 600px;
+    background-color: rgb(216, 216, 216);
 
 }
 
 .grid-cell {
     display: flex;
     background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(78, 78, 78, 0.158);
     z-index: 1;
     
 }
-
-#buttons-div, #control-buttons {
+    
+#buttons-div, #control-buttons{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 1em;
+    padding-top: 50px;
+
+}
+
+#control-buttons {
+    padding-top: 30px;
+    padding-left: 35px;
 }
 
 
-#buttons-div{
-    padding: 3em;
+#control-buttons div {
+    transform: rotate(-40deg);
+    
+}
+
+#control-buttons div button {
+    border-radius: 30px;
+    width: 100px;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    background-color: #a8ffdb;
+    font-family: 'Raleway', sans-serif;
+    font-size: large;
+}
+
+
+#left-knob-img, #right-knob-img {
+    height: 95px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    
+}
+#github-logo-link {
+    align-self: center;
+}
+
+#github-logo-link img{
+    height: 40px;
+}
+
+p, #icons-link {
+    align-self: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: beige;
+}
+a {
+    text-decoration: none;
 }

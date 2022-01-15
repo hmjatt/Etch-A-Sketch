@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,500&family=Marck+Script&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -19,19 +19,20 @@
         <div id="game-frame-div">
 
             <div id=game-heading-div>
-                <h1>Etch A Sketch</h1>
+                <h1>Etch A Sketch </h1>
+                <p>&reg</p>
             </div>
 
 
             <div id="game-screen-div">
-                <div id="container"></div>
+                <div id="grid-container"></div>
             </div>
 
 
             <div id="buttons-div">
 
                 <div id="left-knob-div">
-                    <button>Left Knob</button>
+                    <img id="left-knob-img" src="images/left-right.png" alt="left-knob">
                 </div>
     
     
@@ -44,18 +45,18 @@
                         <button onclick="clear()" id="reset-button">Color</button>
                     </div>
     
-                    <div id=size-div">
+                    <div id="size-div">
                         <button onclick="clear()" id="size-button">Size</button>
                     </div>
     
                     <div id="reset-div">
-                        <button onclick="clear()" id="reset-button">Shake-It</button>
+                        <button onclick="clear()" id="reset-button">Clear</button>
                     </div>
                 </div>
     
     
                 <div id="right-knob-div">
-                    <button>Right Knob</button>
+                    <img id="right-knob-img" src="images/up-down.png" alt="right-knob">
                 </div>
 
             </div>
@@ -63,6 +64,17 @@
         </div>
         
     </div>
+
+
+    <footer>
+        <a id="github-logo-link" href="https://github.com/hmjatt" alt="github-logo"><img id="github-logo-img" src="images/github-logo.png" alt="github-logo"></a>
+        <p>Harmeet Matharoo &copy copyright 2022</p>
+        <a id="icons-link" href="https://www.flaticon.com/free-icons/user-interface" title="user interface icons">User interface icons created by Creatype - Flaticon</a>
+    
+    </footer>
+
+    
+
 
     <script src="script.js"></script>
 </body>

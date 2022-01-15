@@ -1,6 +1,6 @@
 
 
-const container = document.getElementById("container");
+const container = document.getElementById("grid-container");
 const resetButton = document.querySelector("button");
 
 
@@ -8,14 +8,14 @@ resetButton.addEventListener("click", function reset() {
     container.innerHTML = "";
     
     
-    let usrInput = parseInt(prompt("What size grid do you want(Max. 100), e.g, 64 gives you 64 rows and 64 columns"));
+    let usrInput = parseInt(prompt("What size grid do you want(Max. 80), e.g, 64 gives you 64 rows and 64 columns"));
     
-    if(typeof(usrInput) === "number" && usrInput < 100) {
+    if(typeof(usrInput) === "number" && usrInput < 81) {
         
         makeGrid(usrInput, usrInput);
 
-    }   else if(usrInput >= 100 || usrInput === null) {
-        alert("Please Enter a Number less than 100");
+    }   else if(usrInput >= 81 || usrInput === null) {
+        alert("Please Enter a Number less than 80");
 
     }   else if(typeof(usrInput) != "number") {
         alert("Please Enter a Number");
