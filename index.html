@@ -37,16 +37,33 @@
     
     
                 <div id="control-buttons">
+
                     <div id="mode-div">
-                        <button onclick="clear()" id="mode-button">Mode</button>
+                        <form action="/script.js">
+                            <select id="mode" name="mode">
+                                <option value="freestyle">Freestyle</option>
+                                <option value="classic">Classic</option>
+                            </select>
+                        </form>
                     </div>
-    
+
+
                     <div id="color-div">
-                        <button onclick="clear()" id="reset-button">Color</button>
+                        <form action="/script.js">
+                            <select id="colors" name="colors">
+                                <option value="greyscale">Greyscale</option>
+                                <option value="rainbow">Rainbow</option>
+                                <option value="black">Black</option>
+                                <option value="color">Pick Color</option>
+                            </select>
+                        </form>
                     </div>
     
+
                     <div id="size-div">
-                        <button onclick="clear()" id="size-button">Size</button>
+                        <form action="/script.js">
+                            <input type="range" id="size" name="size" value="16">
+                        </form>
                     </div>
     
                     <div id="reset-div">
@@ -72,8 +89,6 @@
         <a id="icons-link" href="https://www.flaticon.com/free-icons/user-interface" title="user interface icons">User interface icons created by Creatype - Flaticon</a>
     
     </footer>
-
-    
 
 
     <script src="script.js"></script>

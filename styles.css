@@ -71,25 +71,46 @@ h1 {
     padding-left: 35px;
 }
 
-
-#control-buttons div {
-    transform: rotate(-30deg);
-    
+#left-knob-img, #right-knob-img {
+    height: 95px;
 }
 
-#control-buttons div button {
-    border-radius: 30px;
-    width: 100px;
-    height: 30px;
-    color: rgb(0, 0, 0);
+
+
+
+select {
     background-color: #a8ffdb;
     font-family: 'Raleway', sans-serif;
     font-size: large;
+    transform: rotate(-30deg);
+    border: none;
+    border-radius: 45px;
+    width: auto;
+    height: 45px;
+    color: rgb(0, 0, 0);
+    padding-left: 7px;
+    box-shadow: 10px 18px 25px rgba(0, 0, 0, 0.308);
+    font-weight: 700;
 }
 
 
-#left-knob-img, #right-knob-img {
-    height: 95px;
+form input {
+    transform: rotate(-30deg);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.151);
+}
+
+button {
+    border-radius: 45px;
+    width: 100px;
+    height: 45px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background-color: rgb(238, 238, 238);
+    font-family: 'Raleway', sans-serif;
+    font-size: large;
+    transform: rotate(-30deg);
+    box-shadow: 10px 18px 25px rgba(0, 0, 0, 0.308);
+    font-weight: 700;
 }
 
 footer {
@@ -100,6 +121,8 @@ footer {
     text-align: center;
     
 }
+
+
 #github-logo-link {
     align-self: center;
 }
@@ -135,9 +158,6 @@ a {
         margin-top: -50px;
     }
 
-    #control-buttons div button {
-        font-weight: 700;
-    }
 
 }
 
@@ -178,5 +198,18 @@ a {
         margin-top: -5px;
     }
 
+    select {
+        height: 30px;
+    }
+
+    button {
+        height: 30px;
+    }
 
 }
+
+
+
+
+
+
