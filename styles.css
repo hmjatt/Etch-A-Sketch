@@ -128,11 +128,11 @@ a {
     #grid-container {
 
         margin-top: -30px;
-        transform:scaleX(0.8) scaleY(0.9);
+        transform:scaleX(0.9) scaleY(0.9);
     }
 
     #buttons-div {
-        margin-top: -30px;
+        margin-top: -50px;
     }
 
     #control-buttons div button {
@@ -145,7 +145,7 @@ a {
 
 
     #game-heading-div {
-        margin-top: -35px;
+        margin-top: -25px;
     }
 
     #game-frame-div {
@@ -154,10 +154,13 @@ a {
         margin-top: -50px;
     }
 
+    h1 {
+        font-size: 48px;
+    }
 
 
     #grid-container {
-        margin-top: -100px;
+        margin-top: -90px;
         transform:scaleX(0.8) scaleY(0.8);
     }
 
