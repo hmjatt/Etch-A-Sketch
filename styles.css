@@ -23,15 +23,16 @@ body {
     height: 950px;
     background: rgb(255, 97, 97);
     border-radius: 56px;
+    transition: 0.5s;
 }
 
-h1 {
-    font-family: 'Marck Script', cursive;
+#heading {
+    font-family: 'Lobster', cursive;
     font-size: 60px;
     color: rgba(252, 255, 64, 0.952);
 }
 
-#game-heading-div p {
+#reg {
     font-family: 'Raleway', sans-serif;
     color: rgba(252, 255, 64, 0.952);
     font-size: 24px;
@@ -45,6 +46,7 @@ h1 {
     height: 600px;
     width: 600px;
     background-color: rgb(216, 216, 216);
+    transition: 0.5s;
 
 }
 
@@ -71,7 +73,7 @@ h1 {
 
 
 #control-buttons div {
-    transform: rotate(-40deg);
+    transform: rotate(-30deg);
     
 }
 
@@ -95,6 +97,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     padding: 1em;
+    text-align: center;
     
 }
 #github-logo-link {
@@ -113,4 +116,67 @@ p, #icons-link {
 }
 a {
     text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+    #game-frame-div {
+        height: 750px;
+        transform:scaleX(0.95) scaleY(0.98);
+
+    }
+
+    #grid-container {
+
+        margin-top: -70px;
+        transform:scaleX(0.8) scaleY(0.9);
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    #buttons-div {
+        margin-top: -70px;
+    }
+
+    #control-buttons div button {
+        font-weight: 700;
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    #game-heading-div {
+        margin-top: -15px;
+    }
+
+    #game-frame-div {
+        height: 650px;
+        transform:scaleX(0.60) scaleY(0.95);
+        margin-top: -50px;
+    }
+
+
+
+    #grid-container {
+        margin-top: -110px;
+        transform:scaleX(0.8) scaleY(0.8);
+    }
+
+    #buttons-div {
+        margin-top: -85px;
+        height: 35px;
+    }
+
+    #left-knob-img, #right-knob-img {
+        height: 70px;
+    }
+
+    #control-buttons {
+        margin-left: -30px;
+        margin-top: -5px;
+    }
+
+
 }
