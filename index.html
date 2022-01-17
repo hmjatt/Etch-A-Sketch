@@ -30,11 +30,6 @@
 
 
             <div id="buttons-div">
-
-                <div id="left-knob-div">
-                    <img id="left-knob-img" src="images/knob.png" alt="left-knob">
-                </div>
-    
     
                 <div id="control-buttons">
 
@@ -48,16 +43,23 @@
                         </form>
                     </div>
 
-
                     <div id="color-div">
                         <form action="/script.js">
                             <select id="colors" name="colors" onchange="colorChange()">
                                 <option value="rainbow">Rainbow</option>
                                 <option value="greyscale">Greyscale</option>
-                                <option value="color">Pick Color</option>
+                                <option value="color-pick"> Pick Color
+                                    <div id="color-pick-div">
+                                        <input type="color" id="color-picker" onchange="colorPick()">
+                                    </div>
+                                </option>
                             </select>
                         </form>
                     </div>
+
+                    <!-- <div id="color-pick-div">
+                        <input type="color" id="color-picker" onchange="colorPick()">
+                    </div> -->
     
 
                     <div id="size-div">
@@ -71,10 +73,6 @@
                     </div>
                 </div>
     
-    
-                <div id="right-knob-div">
-                    <img id="right-knob-img" src="images/knob.png" alt="right-knob">
-                </div>
 
             </div>
             
@@ -86,8 +84,6 @@
     <footer>
         <a id="github-logo-link" href="https://github.com/hmjatt" alt="github-logo"><img id="github-logo-img" src="images/github-logo.png" alt="github-logo"></a>
         <p>Harmeet Matharoo &copy copyright 2022</p>
-        <a id="icons-link" href="https://www.flaticon.com/free-icons/user-interface" title="user interface icons">User interface icons created by Creatype - Flaticon</a>
-    
     </footer>
 
 

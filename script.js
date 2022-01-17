@@ -3,6 +3,8 @@
 const container = document.getElementById("grid-container");
 const mode = document.getElementById("mode");
 const colors = document.getElementById("colors");
+const colorOption = document.getElementById("color-option");
+const colorPicker = document.getElementById("color-picker");
 const resetButton = document.querySelector("button");
 
 
@@ -56,7 +58,7 @@ function makeGrid(rows, columns) {
             window.colorChange = function() {
 
 
-                let randomColor;
+                let color;
                 //generate random color
                         
                 const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
@@ -68,22 +70,26 @@ function makeGrid(rows, columns) {
                 if(colors.value == "rainbow") {
                     //range is between all colors
                     const randomByte = () => randomNumber(0, 255);
-                    randomColor = `rgba(${[randomByte(), randomByte(), randomByte(), opacity()].join(',')})`;
+                    color = `rgba(${[randomByte(), randomByte(), randomByte(), opacity()].join(',')})`;
                 } else if(colors.value == "greyscale") {
                     //range between greys(all rbg values same eg. rbg(16, 16, 16))
-                    const randomByte = () => randomNumber(0, 216);
+                    const randomByte = () => randomNumber(0, 125);
                     let colorGenerated = randomByte();
                     // console.log(randomByte());
-                    randomColor = `rgba(${[colorGenerated, colorGenerated, colorGenerated, opacity()].join(',')})`;
-                } else if(colors.value == "color") {
+                    color = `rgba(${[colorGenerated, colorGenerated, colorGenerated, opacity()].join(',')})`;
+                } 
+                // else if(colors.value == "color") {
 
-                    //show the player a rbg chart and grab valuew of color from there
-                    const randomByte = () => randomNumber(0, 255);
-                    randomColor = `rgba(${[randomByte(), randomByte(), randomByte(), opacity()].join(',')})`;
-                }
+                //     //show the player a rbg chart and grab value of color from there
+                //     colorOption = '<input type="color" id="color" name="color" value="red">';
+
+
+                //     const randomByte = () => randomNumber(0, 255);
+                //     randomColor = `rgba(${[randomByte(), randomByte(), randomByte(), opacity()].join(',')})`;
+                // }
 
                 // console.log(randomColor);
-                return(randomColor);
+                return(color);
 
             }
             
@@ -114,3 +120,27 @@ function  modeChange() {
     return(opChange);
 }
 
+function colorPick(h) {
+
+    h = colorPicker.value;
+
+    let r = 0, g = 0, b = 0;
+
+    // 3 digits
+    if (h.length == 4) {
+      r = "0x" + h[1] + h[1];
+      g = "0x" + h[2] + h[2];
+      b = "0x" + h[3] + h[3];
+  
+    // 6 digits
+    } else if (h.length == 7) {
+      r = "0x" + h[1] + h[2];
+      g = "0x" + h[3] + h[4];
+      b = "0x" + h[5] + h[6];
+    }
+    
+    console.log("rgb("+ +r + "," + +g + "," + +b + ")");
+    return "rgb("+ +r + "," + +g + "," + +b + ")";
+
+    
+}

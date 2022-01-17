@@ -71,9 +71,6 @@ h1 {
     padding-left: 35px;
 }
 
-#left-knob-img, #right-knob-img {
-    height: 95px;
-}
 
 
 
@@ -93,6 +90,9 @@ select {
     font-weight: 700;
 }
 
+#color-pick {
+    margin-left: 20px;
+}
 
 form input {
     transform: rotate(-30deg);
@@ -169,7 +169,7 @@ a {
     }
 
     #game-frame-div {
-        height: 650px;
+        height: 675px;
         transform:scaleX(0.60) scaleY(0.95);
         margin-top: -50px;
     }
@@ -185,13 +185,11 @@ a {
     }
 
     #buttons-div {
-        margin-top: -100px;
+        margin-top: -80px;
         height: 35px;
     }
 
-    #left-knob-img, #right-knob-img {
-        height: 70px;
-    }
+ 
 
     #control-buttons {
         margin-left: -30px;
