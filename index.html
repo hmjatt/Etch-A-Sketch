@@ -40,9 +40,10 @@
 
                     <div id="mode-div">
                         <form action="/script.js">
-                            <select id="mode" name="mode">
-                                <option value="freestyle">Freestyle</option>
+                            <select id="mode" name="mode" onchange="modeChange()">
+                                <option value="modern">Modern</option>
                                 <option value="classic">Classic</option>
+                                <option value="mixed">Mixed</option>
                             </select>
                         </form>
                     </div>
@@ -50,10 +51,9 @@
 
                     <div id="color-div">
                         <form action="/script.js">
-                            <select id="colors" name="colors">
-                                <option value="greyscale">Greyscale</option>
+                            <select id="colors" name="colors" onchange="colorChange()">
                                 <option value="rainbow">Rainbow</option>
-                                <option value="black">Black</option>
+                                <option value="greyscale">Greyscale</option>
                                 <option value="color">Pick Color</option>
                             </select>
                         </form>

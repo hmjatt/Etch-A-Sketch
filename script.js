@@ -1,6 +1,8 @@
 
 
 const container = document.getElementById("grid-container");
+const mode = document.getElementById("mode");
+const colors = document.getElementById("colors")
 const resetButton = document.querySelector("button");
 
 
@@ -48,7 +50,7 @@ function makeGrid(rows, columns) {
                 const myArray = opacity.split(", ");
                 let previousOpacity = myArray.slice(-1)[0];
                 let previousOpacityInt = parseFloat(previousOpacity);
-                let newOpacity =  previousOpacityInt + 0.10;
+                let newOpacity =  previousOpacityInt + modeChange(); //grab opacity from modeChange fxn
                 return newOpacity;
             }
             
@@ -65,3 +67,29 @@ function makeGrid(rows, columns) {
 makeGrid(16, 16);
 
 
+//increament the opacity depending on the Mode selected
+function  modeChange() {
+
+    let opChange = 0.00;
+
+    if(mode.value == "modern") {
+        opChange = 0.10;
+    } else if(mode.value == "classic") {
+        opChange = 1.00;
+    } else if(mode.value == "mixed") {
+        opChange = 0.25;
+    }
+
+    return(opChange);
+}
+
+//change the color depending on the Color selected
+function colorChange() {
+    if(mode.value == "modern") {
+        opChange = 0.10;
+    } else if(mode.value == "classic") {
+        opChange = 1.00;
+    } else if(mode.value == "mixed") {
+        opChange = 0.25;
+    }
+}
