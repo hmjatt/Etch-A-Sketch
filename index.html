@@ -48,24 +48,21 @@
                             <select id="colors" name="colors" onchange="colorChange()">
                                 <option value="rainbow">Rainbow</option>
                                 <option value="greyscale">Greyscale</option>
-                                <option value="color-pick"> Pick Color
-                                    <div id="color-pick-div">
-                                        <input type="color" id="color-picker" onchange="colorPick()">
-                                    </div>
-                                </option>
                             </select>
                         </form>
                     </div>
 
-                    <!-- <div id="color-pick-div">
+                    <div id="color-pick-div">
+                        <!-- <label for="color-picker">Color :</label> -->
                         <input type="color" id="color-picker" onchange="colorPick()">
-                    </div> -->
+                        
+                    </div>
     
 
                     <div id="size-div">
-                        <form action="/script.js">
-                            <input type="range" id="size" name="size" value="16">
-                        </form>
+                        
+                        <input type="range" id="size" name="size" value="16">
+                    
                     </div>
     
                     <div id="reset-div">

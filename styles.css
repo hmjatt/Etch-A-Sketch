@@ -57,21 +57,19 @@ h1 {
     z-index: 1;
     
 }
+
+#buttons-div {
+    padding: 1em;
+}
     
-#buttons-div, #control-buttons{
+#control-buttons{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 1em;
     padding-top: 50px;
+    font-weight: 700;
 
 }
-
-#control-buttons {
-    padding-top: 30px;
-    padding-left: 35px;
-}
-
-
 
 
 
@@ -90,9 +88,59 @@ select {
     font-weight: 700;
 }
 
-#color-pick {
-    margin-left: 20px;
+#color-pick-div {  
+    transform: rotate(-30deg);
+    
 }
+
+#color-picker {
+    width: 125px;
+    height: 45px;
+    border-radius: 35px;
+    padding: 5px 10px 5px 10px;
+    background-color: #a8ffdb;
+    box-shadow: 10px 18px 25px rgba(0, 0, 0, 0.308);
+
+}
+
+#size-div {
+   padding-top: 10px;
+   transform: rotate(-30deg);
+   background-color: #a8ffdb;
+   border-radius: 45px;
+}
+
+#size {
+    -webkit-appearance: none;
+    margin-top: 7px;
+    border-radius: 10px;
+    height: 10px;
+    background: #252525;
+   
+
+}
+
+#size::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    border-radius: 25px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  
+#size::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    border: 1px solid black;
+    background: #f5f5f5;
+    cursor: pointer;
+}
+
+
 
 form input {
     transform: rotate(-30deg);
@@ -155,7 +203,7 @@ a {
     }
 
     #buttons-div {
-        margin-top: -50px;
+        margin-top: -40px;
     }
 
 
@@ -184,17 +232,13 @@ a {
         transform:scaleX(0.8) scaleY(0.8);
     }
 
-    #buttons-div {
-        margin-top: -80px;
-        height: 35px;
-    }
+    /* #control-buttons {
+        padding-top: -80px;
+    } */
 
  
 
-    #control-buttons {
-        margin-left: -30px;
-        margin-top: -5px;
-    }
+
 
     select, button {
         height: 30px;

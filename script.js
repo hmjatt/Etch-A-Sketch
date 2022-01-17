@@ -8,6 +8,11 @@ const colorPicker = document.getElementById("color-picker");
 const resetButton = document.querySelector("button");
 
 
+let red = {};
+let green = {};
+let blue = {};
+
+
 resetButton.addEventListener("click", function reset() {
     container.innerHTML = "";
     
@@ -77,7 +82,10 @@ function makeGrid(rows, columns) {
                     let colorGenerated = randomByte();
                     // console.log(randomByte());
                     color = `rgba(${[colorGenerated, colorGenerated, colorGenerated, opacity()].join(',')})`;
-                } 
+                } else {
+                    
+                    color = `rgba(${[red.r, green.g, blue.b, opacity()].join(',')})`;
+                }
                 // else if(colors.value == "color") {
 
                 //     //show the player a rbg chart and grab value of color from there
@@ -89,6 +97,13 @@ function makeGrid(rows, columns) {
                 // }
 
                 // console.log(randomColor);
+
+
+
+
+
+
+                console.log(color);
                 return(color);
 
             }
@@ -96,6 +111,11 @@ function makeGrid(rows, columns) {
     
             cell.style.backgroundColor = colorChange();
         });
+
+    
+
+
+        // cell.style.backgroundColor = colorPick();
         
     }
    
@@ -120,9 +140,9 @@ function  modeChange() {
     return(opChange);
 }
 
-function colorPick(h) {
 
-    h = colorPicker.value;
+function colorPick() {
+    let h = colorPicker.value;
 
     let r = 0, g = 0, b = 0;
 
@@ -134,13 +154,10 @@ function colorPick(h) {
   
     // 6 digits
     } else if (h.length == 7) {
-      r = "0x" + h[1] + h[2];
-      g = "0x" + h[3] + h[4];
-      b = "0x" + h[5] + h[6];
+      red.r = "0x" + h[1] + h[2];
+      green.g = "0x" + h[3] + h[4];
+      blue.b = "0x" + h[5] + h[6];
     }
-    
-    console.log("rgb("+ +r + "," + +g + "," + +b + ")");
-    return "rgb("+ +r + "," + +g + "," + +b + ")";
 
     
 }
