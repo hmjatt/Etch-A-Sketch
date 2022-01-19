@@ -1,7 +1,7 @@
 # Etch-A-Sketch
 
 
-[Live Demo](https://hmjatt.github.io/Landing-page/)
+[Live Demo](https://hmjatt.github.io/Etch-A-Sketch/)
 
 Etch-A-Sketch game, let's you draw using mouse cursor, Have Fun!!!. Please feel free to give me reviews at my [Twitter](https://twitter.com/hmjatt/)
 
