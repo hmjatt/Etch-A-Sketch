@@ -226,6 +226,14 @@ a {
         padding: 0;;
     }
 
+    footer a {
+        margin-top: -20px;
+    }
+
+    footer p {
+        margin-top: -10px;
+    }
+
 }
 
 
