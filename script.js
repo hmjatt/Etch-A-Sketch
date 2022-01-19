@@ -26,16 +26,6 @@ function changeSize() {
     makeGrid(size, size);
 }
 
-// sizeInput.addEventListener('input', function changeSize() {
-//     container.innerHTML = "";
-    
-//     let size = parseInt(sizeInput.value);
-    
-//     let defaultSize = 16;
-        
-//         makeGrid(defaultSize, defaultSize);
-    
-// });
 
 //reset the grid
 
@@ -62,7 +52,54 @@ function makeGrid(rows, columns) {
         const cell = document.createElement("div");
     
         container.appendChild(cell).className = "grid-cell";
+
         cell.addEventListener('mouseover', function color(){
+            
+            //generate opacity, based on cell's previous opacity
+            window.opacity = function() {
+
+                let opacity = window.getComputedStyle(cell).backgroundColor;
+
+                const myArray = opacity.split(", ");
+                let previousOpacity = myArray.slice(-1)[0];
+                let previousOpacityInt = parseFloat(previousOpacity);
+                let newOpacity =  previousOpacityInt + modeChange(); //grab opacity from modeChange fxn
+
+                return newOpacity;
+            }
+
+  
+
+
+
+            //create color based on color Selected
+            if(colorSelected === true) {
+
+                
+
+                colorPick();
+
+                getColor = rgbValue;
+
+            } else if(colorModeChanged === true) {
+            
+
+                colorChange();
+
+                getColor = colorModeColor;
+            } else {
+                getColor = "rgb(0, 0, 0)"
+            }           
+
+            //onload color is black
+            
+
+            
+            cell.style.backgroundColor = getColor;
+        });
+
+
+        cell.addEventListener('touchmove', function color(){
             
             //generate opacity, based on cell's previous opacity
             window.opacity = function() {

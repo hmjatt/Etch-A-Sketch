@@ -193,25 +193,6 @@ a {
     text-decoration: none;
 }
 
-/* @media only screen and (max-width: 700px) {
-    #game-frame-div {
-        height: 850px;
-        transform:scaleX(0.95) scaleY(0.98);
-
-    }
-
-    #grid-container {
-
-        margin-top: -30px;
-        
-    }
-
-    #buttons-div {
-        margin-top: -40px;
-    }
-
-
-} */
 
 @media only screen and (max-width: 600px) {
 
@@ -241,7 +222,9 @@ a {
         margin-top: -85px;
     }
 
-
+    footer {
+        padding: 0;;
+    }
 
 }
 
