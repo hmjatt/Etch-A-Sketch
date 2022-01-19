@@ -81,7 +81,7 @@ select {
     transform: rotate(-30deg);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 45px;
-    width: auto;
+    width: 125px;
     height: 45px;
     color: rgb(0, 0, 0);
     padding-left: 7px;
@@ -193,7 +193,7 @@ a {
     text-decoration: none;
 }
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
     #game-frame-div {
         height: 850px;
         transform:scaleX(0.95) scaleY(0.98);
@@ -203,7 +203,7 @@ a {
     #grid-container {
 
         margin-top: -30px;
-        transform:scaleX(0.9) scaleY(0.9);
+        
     }
 
     #buttons-div {
@@ -211,9 +211,9 @@ a {
     }
 
 
-}
+} */
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 600px) {
 
 
     #game-heading-div {
@@ -222,7 +222,7 @@ a {
 
     #game-frame-div {
         height: 675px;
-        transform:scaleX(0.60) scaleY(0.95);
+        transform:scaleX(0.51) scaleY(0.95);
         margin-top: -50px;
     }
 
@@ -233,20 +233,15 @@ a {
 
     #grid-container {
         margin-top: -90px;
-        transform:scaleX(0.8) scaleY(0.8);
+
+        transform:scaleX(1.13) scaleY(0.8);
     }
 
-    /* #control-buttons {
-        padding-top: -80px;
-    } */
-
- 
-
-
-
-    select, button {
-        height: 30px;
+    #buttons-div {
+        margin-top: -85px;
     }
+
+
 
 }
 
