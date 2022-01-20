@@ -98,51 +98,6 @@ function makeGrid(rows, columns) {
             cell.style.backgroundColor = getColor;
         });
 
-
-        cell.addEventListener('touchmove', function color(){
-            
-            //generate opacity, based on cell's previous opacity
-            window.opacity = function() {
-
-                let opacity = window.getComputedStyle(cell).backgroundColor;
-
-                const myArray = opacity.split(", ");
-                let previousOpacity = myArray.slice(-1)[0];
-                let previousOpacityInt = parseFloat(previousOpacity);
-                let newOpacity =  previousOpacityInt + modeChange(); //grab opacity from modeChange fxn
-
-                return newOpacity;
-            }
-
-  
-
-
-
-            //create color based on color Selected
-            if(colorSelected === true) {
-
-                
-
-                colorPick();
-
-                getColor = rgbValue;
-
-            } else if(colorModeChanged === true) {
-            
-
-                colorChange();
-
-                getColor = colorModeColor;
-            } else {
-                getColor = "rgb(0, 0, 0)"
-            }           
-
-            //onload color is black
-            
-
-            
-            cell.style.backgroundColor = getColor;
-        });
         
     }
    
